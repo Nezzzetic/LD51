@@ -51,6 +51,7 @@
      <Compile Include="Assets\scripts\HicController.cs" />
      <Compile Include="Assets\PlayerInputActions.cs" />
      <Compile Include="Assets\scripts\MainCharController.cs" />
+     <Compile Include="Assets\scripts\WaterControllerView.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.9f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>

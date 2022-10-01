@@ -8,6 +8,7 @@ public class HicController : MonoBehaviour
     public Action OnHicStop = delegate {  };
     public Action OnHic = delegate {  };
     public bool HicActive;
+    public Animator Animator;
     public WaterController playerWaterController
     {
         get;
@@ -21,6 +22,7 @@ public class HicController : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        Animator=GetComponent<Animator>();
         HicActive = true;
         hicTimer = StartHic;
         WaterConsumer.OnFull += HicStopped;
@@ -40,6 +42,7 @@ public class HicController : MonoBehaviour
         hicTimer -= 10;
         playerWaterController.Damage(HicDamage);
         Debug.Log("HIC");
+        Animator.SetTrigger("jump");
     }
 
     private void HicStopped()
