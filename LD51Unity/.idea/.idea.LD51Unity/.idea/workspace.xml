@@ -36,6 +36,14 @@
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../51Build\LD51Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Pet\LD51\51Build" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.9f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Pet\LD51\LD51Proj\LD51\LD51Unity -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
@@ -75,7 +83,7 @@
       <updated>1662717914181</updated>
       <workItem from="1662717919663" duration="18000" />
       <workItem from="1664562471242" duration="1774000" />
-      <workItem from="1664624597641" duration="15744000" />
+      <workItem from="1664624597641" duration="16424000" />
     </task>
     <servers />
   </component>

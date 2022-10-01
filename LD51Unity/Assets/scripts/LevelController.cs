@@ -7,11 +7,13 @@ public class LevelController : MonoBehaviour
 {
     public HicController[] Hics;
     public WaterController Player;
+    public CameraController Camera;
 
     public static int Level;
     // Start is called before the first frame update
     void Awake()
     {
+        Camera.target = Player.transform;
         foreach (var hic in Hics)
         {
             hic.playerWaterController = Player;
