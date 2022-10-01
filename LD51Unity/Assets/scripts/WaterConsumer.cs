@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class WaterConsumer : MonoBehaviour
     public int WaterLevelMax;
     public bool full;
     public bool filled;
+    public Action OnFull=delegate {  };
 
     public HicController HicController;
     // Start is called before the first frame update
@@ -35,6 +37,7 @@ public class WaterConsumer : MonoBehaviour
             full = true;
             filled = false;
             HicController.HicActive = false;
+            OnFull();
         }
     }
 }

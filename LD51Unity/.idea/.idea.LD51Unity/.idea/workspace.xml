@@ -9,6 +9,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/scripts/HicController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/scripts/LevelController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/scripts/MainCharController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/scripts/WaterCollector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/scripts/WaterConsumer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/scripts/WaterController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -72,7 +74,7 @@
       <updated>1662717914181</updated>
       <workItem from="1662717919663" duration="18000" />
       <workItem from="1664562471242" duration="1774000" />
-      <workItem from="1664624597641" duration="5918000" />
+      <workItem from="1664624597641" duration="13237000" />
     </task>
     <servers />
   </component>

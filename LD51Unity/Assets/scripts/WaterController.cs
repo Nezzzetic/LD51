@@ -1,23 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WaterController : MonoBehaviour
 {
     public int WaterLevel;
+    public WaterSender WaterSender;
     public float FillPeriod;
     public float SendPeriod;
     private float fillTimer;
     private float sendTimer;
-    public bool full;
-    public bool filled;
-    public bool empty;
-    public WaterSender WaterSender;
+    public bool full => WaterLevel == 100;
+    public bool Filled { get; private set; }
+    public bool empty => WaterLevel == 0;
+    
+
+    public Text text;
     // Start is called before the first frame update
     void Start()
     {
-        FullCheck();
-        EmptyCheck();
+        LevelCheck();
     }
 
     // Update is called once per frame
@@ -25,31 +28,31 @@ public class WaterController : MonoBehaviour
     {
         UpdateFill();
         UpdateSend();
+        if (text != null) text.text = WaterLevel.ToString();
     }
 
     public void StartFill()
     {
         if (full) return;
         fillTimer = 0;
-        filled = true;
+        Filled = true;
     }
     
     public void StopFill()
     {
         fillTimer = 0;
-        filled = false;
+        Filled = false;
     }
     
     void UpdateFill()
     {
         if (full) return;
-        if (!filled) return;
+        if (!Filled) return;
         fillTimer += Time.deltaTime;
         if (fillTimer < FillPeriod) return;
         fillTimer -= FillPeriod;
         WaterLevel++;
-        empty = false;
-        FullCheck();
+        LevelCheck();
     }
     
     void UpdateSend()
@@ -61,41 +64,20 @@ public class WaterController : MonoBehaviour
         sendTimer -= SendPeriod;
         WaterLevel--;
         WaterSender.currentConsumer.AddFill();
-        EmptyCheck();
-        FullCheck();
+        LevelCheck();
     }
     
     public void Damage(int val)
     {
         WaterLevel -= val;
         if (WaterLevel < 0) WaterLevel = 0;
-        EmptyCheck();
-        FullCheck();
+        LevelCheck();
     }
 
-    void FullCheck()
+    void LevelCheck()
     {
-        if (WaterLevel == 100)
-        {
-            full = true;
-        }
-        else
-        {
-            full = false;
-        }
-    }
-    
-    void EmptyCheck()
-    {
-        if (WaterLevel == 0)
-        {
-            empty = true;
-        }
 
-        else
-        {
-            empty = false;
-        }
     }
+
     
 }

@@ -1,21 +1,29 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class HicController : MonoBehaviour
 {
-
+    public Action OnHicStop = delegate {  };
+    public Action OnHic = delegate {  };
     public bool HicActive;
-    public WaterController playerWaterController;
+    public WaterController playerWaterController
+    {
+        get;
+        set;
+    }
+    public WaterConsumer WaterConsumer;
     public float StartHic;
     private float hicTimer;
     public int HicDamage;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         HicActive = true;
         hicTimer = StartHic;
+        WaterConsumer.OnFull += HicStopped;
     }
 
     // Update is called once per frame
@@ -32,6 +40,11 @@ public class HicController : MonoBehaviour
         hicTimer -= 10;
         playerWaterController.Damage(HicDamage);
         Debug.Log("HIC");
+    }
+
+    private void HicStopped()
+    {
+        OnHicStop();
     }
     
     
