@@ -8,6 +8,7 @@ public class LevelController : MonoBehaviour
     public HicController[] Hics;
     public WaterController Player;
     public CameraController Camera;
+    public CameraShake CameraShake;
 
     public static int Level;
     // Start is called before the first frame update
@@ -18,6 +19,7 @@ public class LevelController : MonoBehaviour
         {
             hic.playerWaterController = Player;
             hic.OnHicStop += LevelEndCheck;
+            hic.OnHic += CameraShake.StartShake;
         }
     }
 

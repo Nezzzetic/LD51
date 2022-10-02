@@ -25,6 +25,7 @@ public class CameraController : MonoBehaviour
         if (z < ZMin) z = ZMin;
         else if (z > ZMax) z = ZMax;
         transform.position = new Vector3(x, 20, z);
-        transform.position = new Vector3(x, 20, z);
     }
+
+    
 }

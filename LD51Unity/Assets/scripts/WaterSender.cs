@@ -12,6 +12,7 @@ public class WaterSender : MonoBehaviour
         if (waterConsumer != null)
         {
             currentConsumer = waterConsumer;
+            
         }
     }
     
@@ -20,6 +21,7 @@ public class WaterSender : MonoBehaviour
         var waterConsumer = other.GetComponent<WaterConsumer>();
         if (waterConsumer != null)
         {
+            waterConsumer.OnFillEnd();
             currentConsumer = null;
         }
     }

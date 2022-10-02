@@ -10,12 +10,19 @@ public class WaterConsumer : MonoBehaviour
     public bool full;
     public bool filled;
     public Action OnFull=delegate {  };
+    public Action OnFillStart=delegate {  };
+    public Action OnFillEnd=delegate {  };
+    
+    public Animator Animator;
 
     public HicController HicController;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        Animator=GetComponent<Animator>();
+        OnFillStart += DrinkStart;
+        OnFillEnd += DrinkStop;
+        OnFull += DrinkStop;
     }
 
     // Update is called once per frame
@@ -27,6 +34,7 @@ public class WaterConsumer : MonoBehaviour
     public void AddFill()
     {
         WaterLevel++;
+        OnFillStart();
         FullCheck();
     }
 
@@ -39,5 +47,19 @@ public class WaterConsumer : MonoBehaviour
             HicController.HicActive = false;
             OnFull();
         }
+    }
+
+    void DrinkStart()
+    {
+        if (full) return;
+        filled = true;
+        Animator.SetBool("drink",true);
+    }
+    
+    void DrinkStop()
+    {
+        if (!full) WaterLevel = 0;
+        filled = false;
+        Animator.SetBool("drink",false);
     }
 }

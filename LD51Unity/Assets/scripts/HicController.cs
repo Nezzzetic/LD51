@@ -9,6 +9,7 @@ public class HicController : MonoBehaviour
     public Action OnHic = delegate {  };
     public bool HicActive;
     public Animator Animator;
+    public GameObject Sun;
     public WaterController playerWaterController
     {
         get;
@@ -40,14 +41,17 @@ public class HicController : MonoBehaviour
         hicTimer += Time.deltaTime;
         if (hicTimer < 10) return;
         hicTimer -= 10;
+        if (WaterConsumer.filled) return;
+        OnHic();
         playerWaterController.Damage(HicDamage);
-        Debug.Log("HIC");
         Animator.SetTrigger("jump");
     }
 
     private void HicStopped()
     {
+        Sun.SetActive(true);
         OnHicStop();
+        
     }
     
     

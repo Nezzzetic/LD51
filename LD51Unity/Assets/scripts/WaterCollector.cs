@@ -8,7 +8,7 @@ public class WaterCollector : MonoBehaviour
     public WaterController WaterController;
     public bool Filled { get; private set; }
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         
     }
@@ -25,6 +25,7 @@ public class WaterCollector : MonoBehaviour
         if (waterSource != null)
         {
             WaterController.StartFill();
+            
         }
     }
     
