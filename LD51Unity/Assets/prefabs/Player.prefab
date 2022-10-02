@@ -900,7 +900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WaterLevel: 0
-  WaterLevelMax: 10
+  WaterLevelMax: 6
   WaterSender: {fileID: 3422248770545871399}
   FillPeriod: 0.3
   SendPeriod: 1
