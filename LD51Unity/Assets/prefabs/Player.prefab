@@ -873,7 +873,7 @@ MonoBehaviour:
   WalkSounds:
   - {fileID: 5703839267465270164}
   - {fileID: 8156994586205527348}
-  WalkSoundDelay: 0.2
+  WalkSoundDelay: 0.1
 --- !u!114 &3422248770545871416
 MonoBehaviour:
   m_ObjectHideFlags: 0
