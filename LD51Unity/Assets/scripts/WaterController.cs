@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class WaterController : MonoBehaviour
 {
@@ -15,8 +14,6 @@ public class WaterController : MonoBehaviour
     public bool Filled { get; private set; }
     public bool empty => WaterLevel == 0;
     
-
-    public Text text;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +25,6 @@ public class WaterController : MonoBehaviour
     {
         UpdateFill();
         UpdateSend();
-        if (text != null) text.text = WaterLevel.ToString();
     }
 
     public void StartFill()

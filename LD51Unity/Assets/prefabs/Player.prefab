@@ -1099,8 +1099,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WaterLevel: 0
   WaterSender: {fileID: 3422248770545871399}
-  FillPeriod: 0.1
-  SendPeriod: 0.05
+  FillPeriod: 0.02
+  SendPeriod: 0.1
   text: {fileID: 0}
 --- !u!114 &3422248770545871417
 MonoBehaviour:
