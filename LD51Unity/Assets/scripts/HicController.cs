@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class HicController : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class HicController : MonoBehaviour
     public bool HicActive;
     public Animator Animator;
     public GameObject Sun;
+    public AudioSource[] Hics;
     public WaterController playerWaterController
     {
         get;
@@ -27,6 +29,7 @@ public class HicController : MonoBehaviour
         HicActive = true;
         hicTimer = StartHic;
         WaterConsumer.OnFull += HicStopped;
+        OnHic += _playHicSound;
     }
 
     // Update is called once per frame
@@ -52,6 +55,12 @@ public class HicController : MonoBehaviour
         Sun.SetActive(true);
         OnHicStop();
         
+    }
+
+    private void _playHicSound()
+    {
+        var rnd = Random.Range(0, Hics.Length);
+        Hics[rnd].Play();
     }
     
     

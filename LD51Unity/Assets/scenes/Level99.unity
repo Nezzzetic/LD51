@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366757, g: 0.48427194, b: 0.5645252, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -420,14 +420,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 636082843}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1039178160
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,6 +459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Hics:
   - {fileID: 40242504}
+  - {fileID: 1497459728}
   Player: {fileID: 2069851695}
   Camera: {fileID: 510710638}
   CameraShake: {fileID: 1337714794}
@@ -522,6 +523,94 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c3eab87688f684da43cb141a3b1814, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1497459728 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8552198307883613275, guid: b733a41e3efdcfc47b73af49d7d781c2, type: 3}
+  m_PrefabInstance: {fileID: 1885332724}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5d26a921c6e4ef4ba4f93524130d7d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &1885332724
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8552198307883613264, guid: b733a41e3efdcfc47b73af49d7d781c2, type: 3}
+      propertyPath: WaterInDrops
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8552198307883613264, guid: b733a41e3efdcfc47b73af49d7d781c2, type: 3}
+      propertyPath: WaterLevelMax
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8552198307883613265, guid: b733a41e3efdcfc47b73af49d7d781c2, type: 3}
+      propertyPath: m_Name
+      value: WaterConsumer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8552198307883613268, guid: b733a41e3efdcfc47b73af49d7d781c2, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8552198307883613268, guid: b733a41e3efdcfc47b73af49d7d781c2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 8552198307883613268, guid: b733a41e3efdcfc47b73af49d7d781c2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8552198307883613268, guid: b733a41e3efdcfc47b73af49d7d781c2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8552198307883613268, guid: b733a41e3efdcfc47b73af49d7d781c2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.80906826
+      objectReference: {fileID: 0}
+    - target: {fileID: 8552198307883613268, guid: b733a41e3efdcfc47b73af49d7d781c2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8552198307883613268, guid: b733a41e3efdcfc47b73af49d7d781c2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5877147
+      objectReference: {fileID: 0}
+    - target: {fileID: 8552198307883613268, guid: b733a41e3efdcfc47b73af49d7d781c2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8552198307883613268, guid: b733a41e3efdcfc47b73af49d7d781c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8552198307883613268, guid: b733a41e3efdcfc47b73af49d7d781c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 71.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 8552198307883613268, guid: b733a41e3efdcfc47b73af49d7d781c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8552198307883613271, guid: b733a41e3efdcfc47b73af49d7d781c2, type: 3}
+      propertyPath: m_Size.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8552198307883613271, guid: b733a41e3efdcfc47b73af49d7d781c2, type: 3}
+      propertyPath: m_Size.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8552198307883613275, guid: b733a41e3efdcfc47b73af49d7d781c2, type: 3}
+      propertyPath: StartHic
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b733a41e3efdcfc47b73af49d7d781c2, type: 3}
 --- !u!114 &2069851695 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3422248770545871416, guid: d73987c1b14749c46b2fcc5838bb144b, type: 3}
@@ -587,6 +676,14 @@ PrefabInstance:
     - target: {fileID: 3422248770545871419, guid: d73987c1b14749c46b2fcc5838bb144b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3422248770545871423, guid: d73987c1b14749c46b2fcc5838bb144b, type: 3}
+      propertyPath: WalkSoundDelay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041096145897879245, guid: d73987c1b14749c46b2fcc5838bb144b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d73987c1b14749c46b2fcc5838bb144b, type: 3}
@@ -655,8 +752,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8552198307883613264, guid: b733a41e3efdcfc47b73af49d7d781c2, type: 3}
-      propertyPath: WaterLevelMax
+      propertyPath: WaterInDrops
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8552198307883613264, guid: b733a41e3efdcfc47b73af49d7d781c2, type: 3}
+      propertyPath: WaterLevelMax
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 8552198307883613265, guid: b733a41e3efdcfc47b73af49d7d781c2, type: 3}
       propertyPath: m_Name

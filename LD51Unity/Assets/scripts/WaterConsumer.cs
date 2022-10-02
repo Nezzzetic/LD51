@@ -12,6 +12,9 @@ public class WaterConsumer : MonoBehaviour
     public Action OnFull=delegate {  };
     public Action OnFillStart=delegate {  };
     public Action OnFillEnd=delegate {  };
+    public GameObject DropsParent;
+    public GameObject[] Drops;
+    public int WaterInDrops;
     
     public Animator Animator;
 
@@ -28,7 +31,8 @@ public class WaterConsumer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    
+        for (var i = 0; i < 5; i++)
+            Drops[i].SetActive(WaterLevel < (i + 1) * WaterInDrops && WaterLevelMax >= (i + 1) * WaterInDrops);
     }
     
     public void AddFill()

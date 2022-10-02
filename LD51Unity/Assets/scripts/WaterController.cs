@@ -13,6 +13,7 @@ public class WaterController : MonoBehaviour
     public bool full => WaterLevel == 100;
     public bool Filled { get; private set; }
     public bool empty => WaterLevel == 0;
+    public WaterControllerView WaterControllerView;
     
     // Start is called before the first frame update
     void Start()
@@ -68,6 +69,7 @@ public class WaterController : MonoBehaviour
         WaterLevel -= val;
         if (WaterLevel < 0) WaterLevel = 0;
         LevelCheck();
+        WaterControllerView.OnDamage();
     }
 
     void LevelCheck()

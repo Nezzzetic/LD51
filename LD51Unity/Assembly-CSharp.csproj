@@ -43,6 +43,7 @@
   <ItemGroup>
      <Compile Include="Assets\scripts\MainCharController.cs" />
      <Compile Include="Assets\scripts\LevelController.cs" />
+     <Compile Include="Assets\scripts\CameraShake.cs" />
      <Compile Include="Assets\scripts\WaterSource.cs" />
      <Compile Include="Assets\scripts\WaterController.cs" />
      <Compile Include="Assets\scripts\WaterSender.cs" />
@@ -53,7 +54,6 @@
      <Compile Include="Assets\scripts\WaterControllerView.cs" />
      <Compile Include="Assets\scripts\SimpleMoveControll.cs" />
      <Compile Include="Assets\scripts\HicController.cs" />
-     <Compile Include="Assets\scripts\CameraShake.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
