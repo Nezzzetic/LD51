@@ -61,8 +61,9 @@ public class WaterController : MonoBehaviour
         WaterSender.currentConsumer.OnFillStart();
         if (sendTimer < SendPeriod) return;
         sendTimer -= SendPeriod;
-        WaterLevel--;
         WaterSender.currentConsumer.AddFill();
+        WaterLevel--;
+        if (WaterSender.currentConsumer!=null && empty) WaterSender.currentConsumer.OnFillEnd();
         LevelCheck();
     }
     

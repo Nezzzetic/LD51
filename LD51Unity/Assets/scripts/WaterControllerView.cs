@@ -15,7 +15,7 @@ public class WaterControllerView : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for (var i = 0; i < 10; i++)
+        for (var i = 0; i < 6; i++)
                 Drops[i].SetActive(WaterController.WaterLevel >= (i+1) * WaterInDrops);
     }
 

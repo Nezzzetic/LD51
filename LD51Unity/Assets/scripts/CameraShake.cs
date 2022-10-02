@@ -23,9 +23,9 @@ public class CameraShake : MonoBehaviour
         while (elapsed < duration)
         {
             float x = Random.Range(-1f, 1f) * magnitude;
-            float y = Random.Range(-1f, 1f) * magnitude;
+            float z = Random.Range(-1f, 1f) * magnitude;
 
-            transform.localPosition = new Vector3(x, y, originalPos.z);
+            transform.localPosition = new Vector3(x, originalPos.y, z);
             elapsed += Time.deltaTime;
 
             yield return null;
@@ -36,6 +36,6 @@ public class CameraShake : MonoBehaviour
 
     public void StartShake()
     {
-        StartCoroutine(Shake(0.1f, 0.1f));
+        //StartCoroutine(Shake(0.1f, 0.5f));
     }
 }

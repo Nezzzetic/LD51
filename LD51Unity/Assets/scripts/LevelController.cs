@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,9 @@ public class LevelController : MonoBehaviour
     public WaterController Player;
     public CameraController Camera;
     public CameraShake CameraShake;
+    public GameObject Win;
+    private bool win;
+    private float winTimer=-1;
 
     public static int Level;
     // Start is called before the first frame update
@@ -27,11 +31,24 @@ public class LevelController : MonoBehaviour
     {
         foreach (var hic in Hics)
             if (hic.HicActive) return;
-        LevelEnd();
+        Win.SetActive(true);
+        winTimer = 1;
     }
     void LevelEnd()
     {
         Level++;
         SceneManager.LoadScene(Level);
+    }
+
+    private void Update()
+    {
+        if (winTimer > 0)
+        {
+            winTimer -= Time.deltaTime;
+            if (winTimer <= 0)
+            {
+                LevelEnd();
+            }
+        }
     }
 }
