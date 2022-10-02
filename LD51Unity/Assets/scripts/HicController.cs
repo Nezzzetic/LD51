@@ -54,7 +54,7 @@ public class HicController : MonoBehaviour
 
     private void HicStopped()
     {
-        Sun.SetActive(true);
+        //Sun.SetActive(true);
         OnHicStop();
         
     }
