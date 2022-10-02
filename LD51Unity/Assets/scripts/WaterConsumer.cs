@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class WaterConsumer : MonoBehaviour
 {
@@ -19,9 +20,23 @@ public class WaterConsumer : MonoBehaviour
     public Animator Animator;
 
     public HicController HicController;
+    
+    public AudioSource[] SwalSounds;
+    public float SwalSoundDelay;
+    private float _swalSoundTimer;
+
+    public GameObject SwalAudio;
     // Start is called before the first frame update
     void Awake()
     {
+        var i = 0;
+        var audios = SwalAudio.GetComponents<AudioSource>();
+        SwalSounds = new AudioSource[audios.Length];
+        foreach (var audio in SwalAudio.GetComponents<AudioSource>())
+        {
+            SwalSounds[i] = audio;
+            i++;
+        }
         Animator=GetComponent<Animator>();
         OnFillStart += DrinkStart;
         OnFillEnd += DrinkStop;
@@ -33,6 +48,12 @@ public class WaterConsumer : MonoBehaviour
     {
         for (var i = 0; i < 5; i++)
             Drops[i].SetActive(WaterLevel < (i + 1) * WaterInDrops && WaterLevelMax >= (i + 1) * WaterInDrops);
+        if (!filled) return;
+        if (_swalSoundTimer > 0) _swalSoundTimer -= Time.deltaTime;
+        if (_swalSoundTimer>0) return;
+        var rnd = Random.Range(0, SwalSounds.Length);
+        SwalSounds[rnd].Play();
+        _swalSoundTimer = SwalSoundDelay;
     }
     
     public void AddFill()

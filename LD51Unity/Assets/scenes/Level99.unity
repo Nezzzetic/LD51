@@ -621,6 +621,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1978401984890399218, guid: ef63211bad5fc9543ae2e3905434951e, type: 3}
+      propertyPath: StartHic
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1978401984890399224, guid: ef63211bad5fc9543ae2e3905434951e, type: 3}
       propertyPath: m_Name
       value: ConsumerSmall (1)
@@ -882,6 +886,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1978401984890399218, guid: ef63211bad5fc9543ae2e3905434951e, type: 3}
+      propertyPath: StartHic
+      value: 4.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1978401984890399224, guid: ef63211bad5fc9543ae2e3905434951e, type: 3}
       propertyPath: m_Name
       value: ConsumerSmall
@@ -1005,7 +1013,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8552198307883613275, guid: b733a41e3efdcfc47b73af49d7d781c2, type: 3}
       propertyPath: StartHic
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b733a41e3efdcfc47b73af49d7d781c2, type: 3}

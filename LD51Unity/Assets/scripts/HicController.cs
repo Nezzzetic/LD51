@@ -12,6 +12,7 @@ public class HicController : MonoBehaviour
     public Animator Animator;
     public GameObject Sun;
     public AudioSource[] Hics;
+    
     public WaterController playerWaterController
     {
         get;
@@ -25,6 +26,7 @@ public class HicController : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        
         Animator=GetComponent<Animator>();
         HicActive = true;
         hicTimer = StartHic;

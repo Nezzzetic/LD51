@@ -5,12 +5,13 @@ using UnityEngine;
 public class WaterController : MonoBehaviour
 {
     public int WaterLevel;
+    public int WaterLevelMax;
     public WaterSender WaterSender;
     public float FillPeriod;
     public float SendPeriod;
     private float fillTimer;
     private float sendTimer;
-    public bool full => WaterLevel == 100;
+    public bool full => WaterLevel == WaterLevelMax;
     public bool Filled { get; private set; }
     public bool empty => WaterLevel == 0;
     public WaterControllerView WaterControllerView;
@@ -57,6 +58,7 @@ public class WaterController : MonoBehaviour
         if (empty) return;
         if (WaterSender.currentConsumer== null || WaterSender.currentConsumer.full) return;
         sendTimer += Time.deltaTime;
+        WaterSender.currentConsumer.OnFillStart();
         if (sendTimer < SendPeriod) return;
         sendTimer -= SendPeriod;
         WaterLevel--;
@@ -66,6 +68,7 @@ public class WaterController : MonoBehaviour
     
     public void Damage(int val)
     {
+        if (empty) return;
         WaterLevel -= val;
         if (WaterLevel < 0) WaterLevel = 0;
         LevelCheck();
